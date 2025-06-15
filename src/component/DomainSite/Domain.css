@@ -1,0 +1,100 @@
+
+/* Custom CSS from the original HTML */
+body {
+    font-family: 'Inter', sans-serif;
+}
+.domain-search-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.2);
+}
+.domain-dropdown {
+    appearance: none;
+    background-image: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.faq-active .faq-content {
+    max-height: 500px; /* Adjust as needed */
+    transition: max-height 0.5s ease-in;
+}
+.faq-active .faq-icon {
+    transform: rotate(180deg);
+}
+.hero-section {
+    background-image: url('https://readdy.ai/api/search-image?query=abstract%20digital%20technology%20background%20with%20blue%20gradient%2C%20clean%20modern%20design%20with%20subtle%20grid%20patterns%20and%20light%20particles%2C%20perfect%20for%20domain%20registration%20website%20hero%20section%2C%20professional%20tech%20aesthetic%2C%20soft%20blue%20tones%2C%20minimalist%20design&width=1920&height=800&seq=1&orientation=landscape');
+    background-size: cover;
+    background-position: center;
+}
+.custom-checkbox {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 2px solid #d1d5db;
+    border-radius: 4px;
+}
+.custom-checkbox:hover input ~ .checkmark {
+    border-color: #0070f3;
+}
+.custom-checkbox input:checked ~ .checkmark {
+    background-color: #0070f3;
+    border-color: #0070f3;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.custom-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+.custom-checkbox .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css');
+
+/* Tailwind overrides for font based on the provided config */
+/* This is a simple way to get some of the custom styling, but a full Tailwind setup is preferred */
+.text-primary {
+  color: #0070f3;
+}
+.bg-primary {
+  background-color: #0070f3;
+}
+.hover\:bg-primary\/90:hover {
+  background-color: rgba(0, 112, 243, 0.9);
+}
+.rounded-button {
+  border-radius: 8px;
+}

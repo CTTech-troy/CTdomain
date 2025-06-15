@@ -1,0 +1,12 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* The original HTML had this specific rule; React handles alternating flex-direction dynamically */
+/* This CSS is kept for general media query handling and the icon fix */
+@media (max-width: 768px) {
+    .feature-section .feature-container {
+        flex-direction: column-reverse !important;
+    }
+}
+:where([class^="ri-"])::before { content: "\f3c2"; }
